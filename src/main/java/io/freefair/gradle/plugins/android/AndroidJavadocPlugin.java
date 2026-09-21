@@ -90,9 +90,13 @@ public class AndroidJavadocPlugin implements Plugin<Project> {
 
                 File docsDir;
                 if (project.hasProperty("docsDir")) {
-                    docsDir = (File) project.property("docsDir");
+                    docsDir = project.file(project.property("docsDir"));
                 } else {
-                    docsDir = new File(project.getBuildDir(), "docs");
+                    docsDir = project.getLayout()
+                            .getBuildDirectory()
+                            .dir("docs")
+                            .get()
+                            .getAsFile();
                 }
                 File javadocDir = new File(docsDir, "javadoc");
                 javadoc.setDestinationDir(new File(javadocDir, variant.getName()));
