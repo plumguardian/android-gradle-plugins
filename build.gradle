@@ -145,6 +145,13 @@ plugins.withId("maven-publish") {
                 }
             }
         }
+
+        repositories {
+            maven {
+                name = "localFolder"
+                url = layout.buildDirectory.dir("local-repo")
+            }
+        }
     }
 }
 
