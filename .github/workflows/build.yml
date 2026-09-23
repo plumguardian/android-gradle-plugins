@@ -3,6 +3,12 @@ name: Build
 on:
   pull_request:
   push:
+    branches:
+      - main
+      - master
+      - '*.*.*'
+    tags:
+      - '*.*.*.*'
 
 jobs:
   wrapper-validation:
