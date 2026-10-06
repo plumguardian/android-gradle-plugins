@@ -1,12 +1,18 @@
 version: 2
+
 updates:
   - package-ecosystem: "github-actions"
     target-branch: "8.13.x"
     directory: "/"
     schedule:
       interval: "weekly"
+    assignees:
+      - "plumguardian"
+
   - package-ecosystem: "gradle"
     target-branch: "8.13.x"
     directory: "/"
     schedule:
       interval: "weekly"
+    assignees:
+      - "plumguardian"
