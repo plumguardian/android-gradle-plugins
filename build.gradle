@@ -13,7 +13,7 @@ repositories {
     mavenCentral()
 }
 
-def freefairGradleVersion = "9.7.0"
+def freefairGradleVersion = "9.8.0"
 def agpVersion = "8.13.2"
 
 group = 'io.freefair.gradle'
