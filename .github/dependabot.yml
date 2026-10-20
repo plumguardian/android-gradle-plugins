@@ -16,3 +16,9 @@ updates:
       interval: "weekly"
     assignees:
       - "plumguardian"
+    groups:
+      freefair:
+        patterns:
+          - "io.freefair.settings.plugin-versions"
+          - "io.freefair.gradle:lombok-plugin"
+          - "io.freefair.gradle:aspectj-plugin"
